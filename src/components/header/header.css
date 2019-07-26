@@ -1,0 +1,26 @@
+.navbar {
+    height: 100px;
+}
+
+.custom-link {
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.nav-link {
+    padding: .2rem;
+}
+.navbar-expand .navbar-nav .nav-link {
+    padding-right: .2rem;
+    padding-left: .2rem;
+}
+
+.active {
+    border-bottom: 3px solid #AB1725;
+    padding-bottom: 0px;
+}
+
+.custom-navmenu:hover {
+    border-bottom: 3px solid #AB1725;
+    padding-bottom: 0px;
+}
