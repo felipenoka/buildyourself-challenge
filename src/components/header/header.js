@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { 
     Navbar, 
     Nav, 
@@ -9,14 +10,18 @@ import './header.css';
 
 const Header = () => (
     <Navbar variant="light">
-        <Navbar.Brand href="#home"><img src={logo} /></Navbar.Brand>
+        <Navbar.Brand href="/home"><img src={logo} /></Navbar.Brand>
+        
         <Nav className="ml-auto">
-            <Nav.Link href="#modelr" className="custom-navmenu">Model R</Nav.Link>
-            <Nav.Link href="#modeliq" className="custom-link custom-navmenu">Model IQ</Nav.Link>
-            <Nav.Link href="#modelmobi" className="custom-link custom-navmenu">Model Mobi</Nav.Link>
-            <Nav.Link href="#modelcharlie" className="custom-link custom-navmenu">Model Charlie</Nav.Link>
-            <Nav.Link href="#modelitaly" className="custom-link custom-navmenu">Model Italy</Nav.Link>
+        <Router>
+            <Nav.Link href="/home" className="custom-navmenu">Model R</Nav.Link>
+            <Nav.Link href="" className="custom-link custom-navmenu">Model IQ</Nav.Link>
+            <Nav.Link href="" className="custom-link custom-navmenu">Model Mobi</Nav.Link>
+            <Nav.Link href="" className="custom-link custom-navmenu">Model Charlie</Nav.Link>
+            <Nav.Link href="" className="custom-link custom-navmenu">Model Italy</Nav.Link>
+            </Router>
         </Nav>
+        
     </Navbar>
 )
 

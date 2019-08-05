@@ -1,0 +1,49 @@
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 10.84px;
+    color: #AB1725;
+}
+
+.subtitle {
+    font-size: 150px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 12.5px;
+}
+
+.model {
+    font-size: 150px;
+    font-weight: 400;
+    color: #AB1725;
+}
+
+.content-home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.content-car {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+
+.img-car {
+    position: absolute;
+    width: 672px;
+    height: auto;
+    top: 145px;
+    left: 180px;
+
+}
+
+.description-title {
+    font-size: 42px;
+    font-weight: 400;
+    color: #AB1725;
+    margin: 0;
+}
