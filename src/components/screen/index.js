@@ -13,45 +13,40 @@ class ContentApp extends Component {
             correntEngine: null,
             correntColor: null,
             correntWheel: null,
-            buildCar: {
-                engine: [],
-            },
+            engine: 0,
+            color: [],
+            wheels: [],
             finalPrice: null,
         }
     }
 
     componentDidMount() {
-        this.getBuildCar();
+        this.fetchBuildCar();
     }
 
-    getBuildCar = async () => {
-        try {
-            const resp = await api.get();
-            const buildingCar = resp.data.data;
-
-            this.setState({
-                buildCar: {
-                    price: buildingCar.price,
-                    engine: {
-                        type: buildingCar.engine.items.type
-                    }
-                }
-            })
-        } catch (err) {
-            this.setState({
-              err: true,
-            })
-          }
+    fetchBuildCar = async () => {
+        const response = await api.get();
+        const buildCar = response.data.data;
+        this.setState({
+            engine: buildCar.engine, 
+            color: buildCar.color, 
+            wheels: buildCar.wheels
+        })
     }
 
 
     render() {
+        const buildCar = this.state;
         return (
             <Router>
                 <Container>
                     <div className="row content-home">
                         <Col lg={6}>Foto</Col>
-                        <Col lg={6}>Price: {}</Col>
+                        <Col lg={6}>
+                            {this.state.engine.items.map(item => (
+                                        <h1>{item.type}</h1>
+                                    ))}
+                        </Col>
                     </div>
                 </Container>
             </Router>
