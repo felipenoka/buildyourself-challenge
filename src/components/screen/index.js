@@ -13,7 +13,7 @@ class ContentApp extends Component {
             correntEngine: null,
             correntColor: null,
             correntWheel: null,
-            engine: 0,
+            engine: [],
             color: [],
             wheels: [],
             finalPrice: null,
@@ -43,9 +43,17 @@ class ContentApp extends Component {
                     <div className="row content-home">
                         <Col lg={6}>Foto</Col>
                         <Col lg={6}>
-                            {this.state.engine.items.map(item => (
-                                        <h1>{item.type}</h1>
+                            <div className="row">
+                            {buildCar.engine &&
+                            buildCar.engine.items &&
+                            buildCar.engine.items.map(item => (
+                                        <div className="col-12">
+                                            <span>{item.kwh} {item.type}</span>
+                                            <span>{item.kwh} kWh</span>
+                                            <span>{item.range} miles range</span>
+                                        </div>
                                     ))}
+                            </div>
                         </Col>
                     </div>
                 </Container>
